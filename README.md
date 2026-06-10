@@ -4,14 +4,14 @@
 ![Experience](https://img.shields.io/badge/Experience-17%20years%20B2B%20SaaS-0969DA?style=flat-square)
 ![APAC](https://img.shields.io/badge/APAC-7%20years-0969DA?style=flat-square)
 
-> *I joined GitHub because I'm teaching myself AI no-code — building things with Claude, figuring out how it all connects. Then I found this role. It felt a lot like the universe saying hello.*
+> *I just joined GitHub because I'm teaching myself AI no-code — building things with Claude, figuring out how it all connects. Then I found this role. It felt a lot like the universe was saying "hello".*
 
 ---
 
 
 ## Who I am
 
-I'm a strategic B2B SaaS marketing leader with seventeen years of experience building full-funnel growth engines across fintech, HR tech, nonprofit platforms, and brand-driven marketplaces. I've spent the last seven years working across ANZ, UK, USA, and APAC — owning pipeline, revenue, community, and partner programs across multiple regions and time zones.
+I'm M. I'm a strategic B2B SaaS marketing leader with seventeen years of experience building full-funnel growth engines across fintech, HR tech, nonprofit platforms, and brand-driven marketplaces. I've spent the last seven years working across ANZ, UK, USA, and APAC — owning pipeline, revenue, community, and partner programs across multiple regions and time zones.
 
 My background is in complex, technical B2B products. Payments infrastructure. HR ecosystems. Fundraising SaaS. A print-on-demand platform where I built a community of creative businesses from scratch across ANZ. I understand how businesses buy, how communities form around tools they trust, and how to build programs that move people from awareness to advocacy.
 
@@ -37,7 +37,7 @@ I build and lead high-performing teams — bringing structure and clarity to fun
 
 ## What I bring to GitHub APAC
 
-**Regional depth.** Four years running ANZ at GoCardless, then a global partner function across APAC and UK at Employment Hero, then global marketing across ANZ, UK, and USA at Raisely. Different markets, different buyers, different playbooks — I've had to know the difference.
+**Regional depth.** Four years running ANZ at GoCardless, then a global partner marketing function leader across APAC and UK at Employment Hero, then global marketing across ANZ, UK, and USA at Raisely. Different markets, different buyers, different playbooks — I've had to know the difference.
 
 **Full-funnel ownership.** Demand gen, ABM, partner marketing, events, brand, lifecycle, PR — I've run all of it, often simultaneously, with accountability for pipeline and revenue.
 

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily-Jane Shurey — Director, APAC Marketing</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --blue: #0969da;
+      --blue-light: #388bfd;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --green: #3fb950;
+      --accent: #f78166;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    nav a:hover { color: var(--text); }
+    nav .cta {
+      margin-left: auto;
+      background: var(--blue);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    nav .cta:hover { background: var(--blue-light); color: white; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 860px;
+      margin: 80px auto 0;
+      padding: 0 32px 80px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero .tag {
+      display: inline-block;
+      background: rgba(9,105,218,0.15);
+      color: var(--blue-light);
+      border: 1px solid rgba(56,139,253,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero h1 span { color: var(--blue-light); }
+    .hero .sub {
+      font-size: 20px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: var(--blue-light); }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--text-muted); }
+
+    /* ── STATS ── */
+    .stats {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+    .stat .number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--blue-light);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat .label {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── CAMPAIGN CARDS ── */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      transition: border-color 0.15s;
+    }
+    .card:hover { border-color: var(--blue); }
+    .card .result {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .card .campaign { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .card .detail { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .card .company {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.06);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-dates { font-size: 13px; color: var(--text-muted); padding-top: 2px; }
+    .timeline-content .role { font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+    .timeline-content .company { color: var(--blue-light); font-size: 14px; margin-bottom: 8px; }
+    .timeline-content .desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .current-badge {
+      display: inline-block;
+      background: rgba(63,185,80,0.15);
+      color: var(--green);
+      border: 1px solid rgba(63,185,80,0.3);
+      border-radius: 20px;
+      padding: 2px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* ── WHY GITHUB ── */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .why-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .why-card .icon { font-size: 20px; margin-bottom: 12px; }
+    .why-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+    .why-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── CONTACT ── */
+    .contact {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 32px;
+      text-align: center;
+    }
+    .contact h2 { font-size: 28px; font-weight: 800; margin-bottom: 16px; }
+    .contact p { color: var(--text-muted); margin-bottom: 32px; font-size: 16px; }
+    .contact-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .contact-link {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .contact-link:hover { border-color: var(--blue-light); color: var(--blue-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 32px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--blue-light); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 12px 16px; }
+      .hero, .stats, .section, .contact { padding-left: 16px; padding-right: 16px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+      .timeline-dates { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">EmaVet / m-marketing-director</a>
+  <a href="#work">Work</a>
+  <a href="#experience">Experience</a>
+  <a href="#letter">Why I'm applying</a>
+  <a href="https://github.com/EmaVet/m-marketing-director" class="cta">View on GitHub</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="tag">Applying for Director, APAC Marketing · GitHub</div>
+  <h1>Emily-Jane<br><span>Shurey</span></h1>
+  <p class="sub">aka M — Strategic Marketing Leader</p>
+  <p>
+    Seventeen years building full-funnel growth engines across B2B SaaS —
+    fintech, HR tech, nonprofit platforms, and brand-driven marketplaces.
+    I joined GitHub because I'm teaching myself AI no-code. Then I found this role.
+    It felt a lot like the universe saying hello.
+  </p>
+  <div class="hero-actions">
+    <a href="#work" class="btn-primary">See the work</a>
+    <a href="COVERLETTER.md" class="btn-secondary">Cover letter →</a>
+    <a href="CV.md" class="btn-secondary">CV →</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="number">17</div>
+    <div class="label">Years B2B SaaS marketing leadership</div>
+  </div>
+  <div class="stat">
+    <div class="number">7+</div>
+    <div class="label">Years in APAC GTM & Marketing Leadership</div>
+  </div>
+  <div class="stat">
+    <div class="number">$5M+</div>
+    <div class="label">Pipeline generated across flagship campaigns</div>
+  </div>
+  <div class="stat">
+    <div class="number">270%</div>
+    <div class="label">YoY growth — sole GTM owner, MOO ANZ, only profitable market globally</div>
+  </div>
+  <div class="stat">
+    <div class="number">2+</div>
+    <div class="label">Years leading global remote teams across APAC, UK & USA</div>
+  </div>
+  <div class="stat">
+    <div class="number">100%</div>
+    <div class="label">eNPS after rebuilding Raisely's marketing team</div>
+  </div>
+</div>
+
+<!-- CAMPAIGN WORK -->
+<section class="section" id="work">
+  <h2>Work highlights</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="result">$2M+</div>
+      <div class="campaign">Cold outbound email program</div>
+      <div class="detail">Built ANZ's first structured cold email program from scratch — segmentation, copy, sequencing. Scaled globally as a repeatable model.</div>
+      <span class="company">GoCardless</span>
+    </div>
+    <div class="card">
+      <div class="result">$1M+</div>
+      <div class="campaign">PayTo University campaign</div>
+      <div class="detail">Education-first campaign for a product still in development. Positioned GoCardless as category leader before competitors had a story.</div>
+      <span class="company">GoCardless</span>
+    </div>
+    <div class="card">
+      <div class="result">10x ROI</div>
+      <div class="campaign">Direct mail & strategic gifting ABM</div>
+      <div class="detail">Physical marketing cut through the digital noise. Delivered 10x ROI and became the global ABM best practice playbook.</div>
+      <span class="company">GoCardless</span>
+    </div>
+    <div class="card">
+      <div class="result">$1M+</div>
+      <div class="campaign">Sage integration partnership launch</div>
+      <div class="detail">First major integration partnership — global co-marketing framework across 5 regions. $1M+ pipeline in 6 months.</div>
+      <span class="company">Employment Hero</span>
+    </div>
+    <div class="card">
+      <div class="result">3 months</div>
+      <div class="campaign">From nothing to national conversation — twice.</div>
+      <div class="detail">At Raisely: never done PR before. Three months later we owned the 4 Day Work Week category with tier-one coverage. At She Shapes History: a potential crisis became a national conversation. No one was demonised. Same timeframe.</div>
+      <span class="company">Raisely · She Shapes History</span>
+    </div>
+    <div class="card">
+      <div class="result">270% YoY</div>
+      <div class="campaign">MOO ANZ — built a region from scratch</div>
+      <div class="detail">First employee in Australia. Community-led growth through customer advocacy and brand storytelling. ANZ became MOO's only profitable market globally.</div>
+      <span class="company">MOO</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dates">Mar 2026 – Present</div>
+      <div class="timeline-content">
+        <div class="role">Founding Marketing Lead <span class="current-badge">current</span></div>
+        <div class="company">She Shapes History</div>
+        <div class="desc">Building the marketing function from zero — tech stack, brand architecture, content strategy, and CRM for a fast-growing social enterprise bringing women's history to life across Australia.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Aug 2025 – Present</div>
+      <div class="timeline-content">
+        <div class="role">Fractional CMO <span class="current-badge">current</span></div>
+        <div class="company">Playful Marketing</div>
+        <div class="desc">Brand identity, messaging frameworks, and GTM foundations for Tyre Review, Vehicle Logic, and others. Strategy and execution — often both at once.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Aug 2025 – Present</div>
+      <div class="timeline-content">
+        <div class="role">Board Director <span class="current-badge">current</span></div>
+        <div class="company">Bendigo Bank Sanctuary Point</div>
+        <div class="desc">Strategic oversight, governance, and community representation for a regional banking branch.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Jun 2024 – May 2025</div>
+      <div class="timeline-content">
+        <div class="role">Head of Marketing</div>
+        <div class="company">Raisely</div>
+        <div class="desc">Global marketing function across ANZ, UK, and USA. Repositioned the brand, built PR from zero, launched ABM, achieved 100% team eNPS. Role ended in company-wide restructure following US merger.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">May 2023 – May 2024</div>
+      <div class="timeline-content">
+        <div class="role">Global Head of Partner Marketing</div>
+        <div class="company">Employment Hero</div>
+        <div class="desc">Built and scaled the global partner marketing function from the ground up. Distributed team of 6 across APAC and UK. Launched Sage partnership — $1M+ pipeline in 6 months.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Jan 2019 – May 2023</div>
+      <div class="timeline-content">
+        <div class="role">Head of Marketing ANZ</div>
+        <div class="company">GoCardless</div>
+        <div class="desc">Owned APAC marketing strategy for 4+ years. Demand gen, ABM, partner, events. $2M+ cold email pipeline, $1M+ education campaign, 10x ROI gifting program — all scaled globally.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Oct 2015 – Feb 2018</div>
+      <div class="timeline-content">
+        <div class="role">Senior Marketing Manager ANZ</div>
+        <div class="company">MOO</div>
+        <div class="desc">First ANZ employee. Built region from zero. 270% YoY growth. Only profitable market globally.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GITHUB -->
+<section class="section">
+  <h2>Why GitHub</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h3>The mission is real</h3>
+      <p>Open source is a public good. GitHub's Social Impact team funds developers building emergency alert systems and refugee camp mapping tools. Verified nonprofits get free access to the platform. I only take roles at companies whose values I can stand behind. This is one of them.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🌍</div>
+      <h3>Community at the biggest scale</h3>
+      <p>I've spent my career building communities around products people trust — nonprofits, creative businesses, partners. GitHub runs that model for 180 million developers. The chance to do that work at this scale is the draw.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">✦</div>
+      <h3>I'm genuinely already here</h3>
+      <p>I joined GitHub to teach myself AI no-code. I was mid-build when I found this role. That's not a strategy — it's just what happened. The universe had a point.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤖</div>
+      <h3>AI that protects, not extracts</h3>
+      <p>GitHub has committed to protecting developer IP in AI-generated code — at a moment when most companies are going the other way. That's a values stance, not just a product decision. It matters to me.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COVER LETTER TEASER -->
+<section class="section" id="letter">
+  <h2>Why I'm applying</h2>
+  <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 28px; max-width: 640px;">
+    <p style="font-size: 15px; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+      I didn't expect to end up on GitHub. I'm not a developer. But a few weeks ago I was signing up because I needed it to publish what I was building. Then I found this role. If that's happening to me, it's happening to a lot of people — and I'm wondering how GitHub is preparing for that.
+    </p>
+    <a href="COVERLETTER.md" class="btn-primary" style="display: inline-block;">Read the full letter →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Let's talk.</h2>
+  <p>I'd welcome a conversation about the APAC marketing opportunity at GitHub.</p>
+  <div class="contact-links">
+    <a href="mailto:m@glitterazzi.me" class="contact-link">📧 m@glitterazzi.me</a>
+    <a href="tel:+61434648697" class="contact-link">📱 0434 648 697</a>
+    <a href="https://github.com/EmaVet/m-marketing-director" class="contact-link">⌥ GitHub repo</a>
+    <a href="PORTFOLIO.md" class="contact-link">📂 Full portfolio</a>
+    <a href="CV.md" class="contact-link">📄 CV</a>
+  </div>
+</section>
+
+<footer>
+  Built with Claude Cowork, connected to GitHub · <a href="https://github.com/EmaVet/m-marketing-director">EmaVet/m-marketing-director</a> · Emily-Jane Shurey 2026
+</footer>
+
+</body>
+</html>
